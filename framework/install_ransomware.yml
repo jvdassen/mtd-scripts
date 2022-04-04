@@ -1,0 +1,20 @@
+---
+- name: Install Ransomware MTD 
+  hosts: rpis
+  remote_user: root
+  tasks:
+     - name: Test access and FS
+       command: "touch /tmp/ansible_was_here"
+
+     - name: Copy Ransomware MTD from framework
+       ansible.builtin.copy: src={{ item.src }} dest={{ item.dest }} remote_src=yes
+       with_items:
+         - { src: '/opt/MTDFramework/Framework/Ransomware', dest: '/opt/MTDFramework/Ransomware'}
+
+     - name: Install dependencies
+       shell: |
+         pip3 install psutil
+         pip3 install setproctitle
+       args:
+         executable: /bin/bash
+

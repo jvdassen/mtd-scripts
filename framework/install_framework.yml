@@ -1,0 +1,46 @@
+---
+- name: Install MTD framework
+  hosts: rpis
+  remote_user: root
+  tasks:
+     - name: Test access and FS
+       command: "touch /tmp/ansible_was_here"
+
+     - name: Install venv
+       apt:
+         name: python3-venv
+         state: present
+
+     - name: Install git
+       apt:
+         name: git
+         state: present
+
+     - name: Clone framework
+       ansible.builtin.git:
+         repo: https://github.com/CortexVacua/MTDFramework
+         dest: /opt/MTDFramework
+
+     - name: Copy files from framework
+       ansible.builtin.copy: src={{ item.src }} dest={{ item.dest }} remote_src=yes
+       with_items:
+         - { src: '/opt/MTDFramework/Framework/MTDDeployerServer.py', dest: '/opt/MTDFramework/MTDDeployerServer.py'}
+         - { src: '/opt/MTDFramework/Framework/config.json', dest: '/opt/MTDFramework/config.json'}
+         - { src: '/opt/MTDFramework/Framework/config-schema.json', dest: '/opt/MTDFramework/config-schema.json'}
+         - { src: '/opt/MTDFramework/Framework/MTDFramework.service', dest: '/etc/systemd/system/MTDFramework.service'}
+
+     - name: Install dependencies
+       shell: |
+         python3 -m venv /opt/MTDFramework/venv3 
+         source /opt/MTDFramework/venv3/bin/activate 
+         pip install jsonschema==3.0.0
+         deactivate 
+       args:
+         executable: /bin/bash
+
+     - name: Make sure a service unit is running
+       ansible.builtin.systemd:
+         state: started
+         daemon_reload: yes
+         enabled: yes
+         name: MTDFramework

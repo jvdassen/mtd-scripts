@@ -1,0 +1,13 @@
+---
+- name: Install Rootkit MTD
+  hosts: rpis
+  remote_user: root
+  tasks:
+     - name: Test access and FS
+       command: "touch /tmp/ansible_was_here"
+
+     - name: Copy MTD and backup /etc/ld.so.preload
+       ansible.builtin.copy: src={{ item.src }} dest={{ item.dest }} remote_src=yes
+       with_items:
+         - { src: '/opt/MTDFramework/Framework/Rootkit', dest: '/opt/MTDFramework/Rootkit'}
+         - { src: '/etc/ld.so.preload', dest: '/opt/MTDFramework/Rootkit/backupLSP'}
