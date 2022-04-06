@@ -1,0 +1,10 @@
+---
+- name: Install monitoring script
+  hosts: rpis
+  remote_user: root
+  tasks:
+    - name: Copy CnC MTD from framework
+      ansible.builtin.copy:
+        src: monitor.sh
+        dest: /root/monitor.sh
+        mode: u=rwx,g=rwx,o=r
