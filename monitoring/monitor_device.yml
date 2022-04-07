@@ -1,0 +1,24 @@
+
+- name: Collect measurements
+  hosts: loopback
+  remote_user: root
+  tasks:
+     - name: Test access and FS
+       command: "touch /tmp/ansible_was_here"
+
+     - name: Copy monitoring script
+       ansible.builtin.copy:
+         src: monitor.sh
+         dest: /opt/
+         mode: u=xrw,g=r,o=r
+
+     - name: Run monitoring script
+       shell: |
+         /opt/monitor.sh NORMAL 4
+       args:
+         executable: /bin/bash
+       register: results
+     - debug:
+        msg:
+           - "The output is {{ results.stdout }}"
+     - local_action: copy content={{ results.stdout }} dest=logs/MONITORING_{{'%Y-%m-%d_%H-%M-%S' | strftime(ansible_date_time.epoch) }}.csv

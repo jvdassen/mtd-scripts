@@ -9,5 +9,5 @@
      - name: Copy MTD and backup /etc/ld.so.preload
        ansible.builtin.copy: src={{ item.src }} dest={{ item.dest }} remote_src=yes
        with_items:
-         - { src: '/opt/MTDFramework/Framework/Rootkit', dest: '/opt/MTDFramework/Rootkit'}
+         - { src: '/opt/MTDFramework/Framework/Rootkit', dest: '/opt/MTDFramework'}
          - { src: '/etc/ld.so.preload', dest: '/opt/MTDFramework/Rootkit/backupLSP'}

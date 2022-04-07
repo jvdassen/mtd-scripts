@@ -9,7 +9,7 @@
      - name: Copy Ransomware MTD from framework
        ansible.builtin.copy: src={{ item.src }} dest={{ item.dest }} remote_src=yes
        with_items:
-         - { src: '/opt/MTDFramework/Framework/Ransomware', dest: '/opt/MTDFramework/Ransomware'}
+         - { src: '/opt/MTDFramework/Framework/Ransomware', dest: '/opt/MTDFramework'}
 
      - name: Install dependencies
        shell: |

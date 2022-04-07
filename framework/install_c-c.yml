@@ -14,4 +14,4 @@
      - name: Copy CnC MTD from framework
        ansible.builtin.copy: src={{ item.src }} dest={{ item.dest }} remote_src=yes
        with_items:
-         - { src: '/opt/MTDFramework/Framework/CnC', dest: '/opt/MTDFramework/CnC'}
+         - { src: '/opt/MTDFramework/Framework/CnC', dest: '/opt/MTDFramework'}
