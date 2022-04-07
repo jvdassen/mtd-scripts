@@ -1,0 +1,64 @@
+#Ransomware, constant encryption - no MTD
+Encryption start: 1649337312
+Encryption stop: 1649338072
+
+# Ransomware, reactive MTD
+
+MTD is being executed every 50s:
+1649341200
+1649341250
+1649341301
+1649341351
+1649341401
+1649341451
+1649341501
+1649341552
+1649341602
+1649341652
+1649341702
+1649341752
+1649341802
+1649341853
+1649341903
+1649341953
+1649342003
+1649342053
+1649342103
+1649342153
+1649342204
+1649342254
+
+
+Ransomware is started at 1649341350
+
+MTD detects file encryption at 1649341574
+Apr 07 16:25:55 sensor python3[20627]: Process: python3 with pid [2777] was terminated.
+
+Ransomware is killed at 1649341610
+Apr 07 16:25:55 sensor python3[20627]: Suspect process modified these files:
+Apr 07 16:25:55 sensor python3[20627]: set()
+Apr 07 16:25:55 sensor python3[20627]: Suspect process modified these files:
+Apr 07 16:25:55 sensor python3[20627]: {'/home/pi/ransomwarefiles/ransomwarefiles.backup/Scalable_and_Configurable_End-to-End_Collection_and
+Apr 07 16:25:55 sensor python3[20627]: Process: python3 with pid [2777] was terminated.
+Apr 07 16:25:55 sensor python3[20627]: No suspected ransomware could be found, and therefore no process was finished.
+Apr 07 16:25:55 sensor python3[20627]: INFO:main:MTD Solution CreateDummyFiles.py has been deployed.
+Apr 07 16:25:55 sensor python3[20627]: INFO:main:Recieved attack report from 127.0.0.1
+Apr 07 16:25:55 sensor python3[20627]: INFO:main:Attack report is being processed.
+Apr 07 16:25:55 sensor python3[20627]: INFO:main:Attack type: Ransomware
+
+
+The following scripts were successfully encrypted by the malware:
+
+File changed from /home/pi/ransomwarefiles/ransomwarefiles.backup/Security_threats_in_IoT.pdf to /home/pi/ransomwarefiles/ransomwarefiles.backup/Security_threats_in_IoT.pdf.wasted
+File changed from /home/pi/ransomwarefiles/ransomwarefiles.backup/A_Review_of_Security_Standards_and_Frameworks_for_IoT-Based_Smart_Environments.pdf to /home/pi/ransomwarefiles/ransomwarefiles.backup/A_Review_of_Security_Standards_and_Frameworks_for_IoT-Based_Smart_Environments.pdf.wasted
+File changed from /home/pi/ransomwarefiles/ransomwarefiles.backup/An_In-Depth_Analysis_of_IoT_Security_Requirements_Challenges_and_Their_Countermeasures_via_Software-Defined_Security.pdf to /home/pi/ransomwarefiles/ransomwarefiles.backup/An_In-Depth_Analysis_of_IoT_Security_Requirements_Challenges_and_Their_Countermeasures_via_Software-Defined_Security.pdf.wasted
+File changed from /home/pi/ransomwarefiles/ransomwarefiles.backup/A_secure_multi-hop_routing_for_IoT_communication.pdf to /home/pi/ransomwarefiles/ransomwarefiles.backup/A_secure_multi-hop_routing_for_IoT_communication.pdf.wasted
+File changed from /home/pi/ransomwarefiles/ransomwarefiles.backup/Analysis_of_network_security_and_privacy_security_based_on_AI_in_IOT_environment.pdf to /home/pi/ransomwarefiles/ransomwarefiles.backup/Analysis_of_network_security_and_privacy_security_based_on_AI_in_IOT_environment.pdf.wasted
+File changed from /home/pi/ransomwarefiles/ransomwarefiles.backup/Demystifying_IoT_Security_An_Exhaustive_Survey_on_IoT_Vulnerabilities_and_a_First_Empirical_Look_on_Internet-Scale_IoT_Exploitations.pdf to /home/pi/ransomwarefiles/ransomwarefiles.backup/Demystifying_IoT_Security_An_Exhaustive_Survey_on_IoT_Vulnerabilities_and_a_First_Empirical_Look_on_Internet-Scale_IoT_Exploitations.pdf.wasted
+File changed from /home/pi/ransomwarefiles/ransomwarefiles.backup/Prov-IoT_A_Security-Aware_IoT_Provenance_Model.pdf to /home/pi/ransomwarefiles/ransomwarefiles.backup/Prov-IoT_A_Security-Aware_IoT_Provenance_Model.pdf.wasted
+File changed from /home/pi/ransomwarefiles/ransomwarefiles.backup/Scalable_and_Configurable_End-to-End_Collection_and_Analysis_of_IoT_Security_Data__Towards_End-to-End_Security_in_IoT_Systems.pdf to /home/pi/ransomwarefiles/ransomwarefiles.backup/Scalable_and_Configurable_End-to-End_Collection_and_Analysis_of_IoT_Security_Data__Towards_End-to-End_Security_in_IoT_Systems.pdf.wasted
+File changed from /home/pi/ransomwarefiles/ransomwarefiles.backup/Penetration_Testing_in_IoT_Network.pdf to /home/pi/ransomwarefiles/ransomwarefiles.backup/Penetration_Testing_in_IoT_Network.pdf.wasted
+File changed from /home/pi/ransomwarefiles/ransomwarefiles.backup/SAT-IoT_An_Architectural_Model_for_a_High-Performance_Fog_Edge_Cloud_IoT_Platform.pdf to /home/pi/ransomwarefiles/ransomwarefiles.backup/SAT-IoT_An_Architectural_Model_for_a_High-Performance_Fog_Edge_Cloud_IoT_Platform.pdf.wasted
+File changed from /home/pi/ransomwarefiles/ransomwarefiles.backup/Development_of_IoT_Security_Exercise_Contents_for_Cyber_Security_Exercise_System.pdf to /home/pi/ransomwarefiles/ransomwarefiles.backup/Development_of_IoT_Security_Exercise_Contents_for_Cyber_Security_Exercise_System.pdf.wasted
+
+
