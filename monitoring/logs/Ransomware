@@ -1,3 +1,39 @@
+# Proactive MONITORING_BACKDOOR_NOMTD_2022-04-08_13-16-00.csv
+1649425172 -> Ransomware starts encrypting files
+Two files are encrypted:
+  'Security_threats_in_IoT.pdf',
+  'A_Review_of_Security_Standards_and_Frameworks_for_IoT-Based_Smart_Environments.pdf',
+
+1649425184 -> MTD is executed since Ransomware is detected
+During execution the following files are encrypted:
+  'A_secure_multi-hop_routing_for_IoT_communication.pdf',
+  'Analysis_of_network_security_and_privacy_security_based_on_AI_in_IOT_environment.pdf',
+  'Demystifying_IoT_Security_An_Exhaustive_Survey_on_IoT_Vulnerabilities_and_a_First_Empirical_Look_on_Internet-Scale_IoT_Exploitations.pdf',
+  'Prov-IoT_A_Security-Aware_IoT_Provenance_Model.pdf',
+  'Scalable_and_Configurable_End-to-End_Collection_and_Analysis_of_IoT_Security_Data__Towards_End-to-End_Security_in_IoT_Systems.pdf',
+  'Penetration_Testing_in_IoT_Network.pdf',
+  'SAT-IoT_An_Architectural_Model_for_a_High-Performance_Fog_Edge_Cloud_IoT_Platform.pdf',
+  'Development_of_IoT_Security_Exercise_Contents_for_Cyber_Security_Exercise_System.pdf',
+
+Log:
+Apr 08 15:42:07 sensor python3[296]: Suspect process modified these files:
+Apr 08 15:42:07 sensor python3[296]: {'/home/pi/ransomwarefiles/ransomwarefiles.backup/Scalable_and_Configurable_End-to-End_Collection_and_A
+nalysis_of_IoT_Security_Data__Towards_End-to-End_Security_in_IoT_Systems.pdf', '/home/pi/ransomwarefiles/ransomwarefiles.backup/Analysis_of_
+network_security_and_privacy_security_based_on_AI_in_IOT_environment.pdf', '/home/pi/ransomwarefiles/ransomwarefiles.backup/Development_of_I
+oT_Security_Exercise_Contents_for_Cyber_Security_Exercise_System.pdf', '/home/pi/ransomwarefiles/start-honey/honey_15.pdf', '/home/pi/ransom
+warefiles/ransomwarefiles.backup/Prov-IoT_A_Security-Aware_IoT_Provenance_Model.pdf', '/home/pi/ransomwarefiles/ransomwarefiles.backup/A_sec
+ure_multi-hop_routing_for_IoT_communication.pdf', '/home/pi/ransomwarefiles/ransomwarefiles.backup/Demystifying_IoT_Security_An_Exhaustive_S
+urvey_on_IoT_Vulnerabilities_and_a_First_Empirical_Look_on_Internet-Scale_IoT_Exploitations.pdf', '/home/pi/ransomwarefiles/ransomwarefiles.
+backup/Penetration_Testing_in_IoT_Network.pdf', '/home/pi/ransomwarefiles/ransomwarefiles.backup/SAT-IoT_An_Architectural_Model_for_a_High-P
+erformance_Fog_Edge_Cloud_IoT_Platform.pdf', '/home/pi/ransomwarefiles/ransomwarefiles.backup/An_In-Depth_Analysis_of_IoT_Security_Requireme
+nts_Challenges_and_Their_Countermeasures_via_Software-Defined_Security.pdf'}
+
+1649425262 -> Ransomware is terminated by MTD
+
+
+
+
+
 #Ransomware, constant encryption - no MTD
 Encryption start: 1649337312
 Encryption stop: 1649338072
