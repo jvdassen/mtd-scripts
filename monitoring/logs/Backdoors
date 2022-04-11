@@ -4,3 +4,10 @@
 1649429073 CnC dead
 1649428996 connection lost
 
+# Proactive - data leak  MONITORING_HTTPBACKDOOR_DATALEAK_PROACTIVE_2022-04-11-_11-23-00.csv
+1649669201 start experiment
+1649669256 start malware
+1649669280 start dataleak
+1649669302 start mtd
+1649669325 no more connnection to backdoor
+
